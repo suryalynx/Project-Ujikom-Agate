@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float speed = 350;
 
+    [Header("Weapon")]
+    public GameObject weaponPrefabs;
+
     private Rigidbody rb;
     private Animator animator;
     private Vector2 moveInput;
@@ -35,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
+            Attack();
+        }
+
         Movement();
     }
 
@@ -49,5 +56,18 @@ public class PlayerMovement : MonoBehaviour
         else if(moveInput.x <0){
             animator.SetBool("Left", true);
         }
+    }
+
+     private void Attack()
+    {
+        Debug.Log("Player Attack");
+        GameObject weapon = Instantiate(weaponPrefabs,transform.position + transform.forward, transform.rotation);
+        Rigidbody rb = weapon.GetComponent<Rigidbody>();
+
+        if(rb != null){
+            rb.AddForce(transform.forward * 40f, ForceMode.Impulse);
+        }
+
+        Destroy(weapon, 4f);
     }
 }

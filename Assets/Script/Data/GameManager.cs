@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public Text countDownText;
+    public TextMeshProUGUI countDownText;
+    public TextMeshProUGUI ScoreText;
     public GameObject gameOver;
-    private float countDown = 60f;
+    public GameObject mainCamera;
+    public GameObject gameOverCamera;
+    public float countDown = 60f;
+
+    [Header("SFX")]
+    public AudioClip[] sfx;
+    public Animator animator;
+
+    private int score = 0;
     private bool isGameOver = false;
 
     private void Start()
     {
         gameOver.SetActive(false);
+        mainCamera.SetActive(true);
+        gameOverCamera.SetActive(false);
     }
 
     void Update(){
@@ -28,6 +40,9 @@ public class GameManager : MonoBehaviour
 
     void GameOver(){
         isGameOver = true;
+        animator.SetBool("GameOver",true);
+        mainCamera.SetActive(false);
+        gameOverCamera.SetActive(true);
         gameOver.SetActive(true);
     }
 }
