@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [Header("Object Player")]
     public PlayerMovement playerMovement;
     public PlayerAttack playerAttack;
-    
+
 
     [Header("SFX")]
     public AudioClip[] sfx;
@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     private bool isGameOver = false;
 
-    private void Awake(){
+    private void Awake()
+    {
         instance = this;
     }
 
@@ -38,23 +39,30 @@ public class GameManager : MonoBehaviour
         mainCamera.SetActive(true);
         gameOverCamera.SetActive(false);
 
+        SFXManager.instance.PlayBGM();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void Update(){
-        if(!isGameOver){
+    void Update()
+    {
+        if (!isGameOver)
+        {
             countDown -= Time.deltaTime;
             countDownText.text = Mathf.Ceil(countDown).ToString();
 
-            if(countDown <= 0){
+            if (countDown <= 0)
+            {
                 GameOver();
             }
         }
     }
 
-    void GameOver(){
+    void GameOver()
+    {
         isGameOver = true;
+        SFXManager.instance.PlaySFX("SFXGameOver");
         playerMovement.enabled = false;
         playerAttack.enabled = false;
         Cursor.lockState = CursorLockMode.None;

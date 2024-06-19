@@ -52,6 +52,7 @@ public class PlayerAttack : MonoBehaviour
                     {
                         rb.AddForce(projectile.forward * 40f, ForceMode.Impulse);
                     }
+                    SFXManager.instance.PlaySFX("SFXFire");
                     animator.SetTrigger("Throw");
                     Destroy(weapon, 3f);
 

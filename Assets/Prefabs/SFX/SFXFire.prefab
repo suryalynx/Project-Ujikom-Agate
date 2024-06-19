@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6467589769323376581}
   - component: {fileID: 3141318765714698280}
   m_Layer: 0
-  m_Name: SFX Fire
+  m_Name: SFXFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,14 +43,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6600c5491e54a044b5fa6d406a6e20b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

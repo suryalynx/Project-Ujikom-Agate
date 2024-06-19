@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject[] hideUI;
     private bool isPaused = false;
+    public PlayerMovement playerMovement;
+    public PlayerAttack playerAttack;
     private PlayerInputActions inputActions;
 
     private void Awake()
@@ -54,6 +56,15 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
+        }
+        if (playerAttack != null)
+        {
+            playerAttack.enabled = true;
+        }
     }
 
     public void Restart()
@@ -69,6 +80,15 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+        }
+        if (playerAttack != null)
+        {
+            playerAttack.enabled = false;
+        }
     }
     public void MainMenu()
     {
