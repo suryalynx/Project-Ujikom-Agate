@@ -8,9 +8,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float speed = 350;
 
-    [Header("Weapon")]
-    public GameObject weaponPrefabs;
-
     private Rigidbody rb;
     private Animator animator;
     private Vector2 moveInput;
@@ -38,10 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
-            Attack();
-        }
-
         Movement();
     }
 
@@ -50,24 +43,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = new Vector3(moveInput.x * speed, rb.velocity.y);
         rb.velocity = move;
 
-        if(moveInput.x > 0){
+        if (moveInput.x > 0)
+        {
             animator.SetBool("Right", true);
+            animator.SetBool("Left", false);
         }
-        else if(moveInput.x <0){
+        else if (moveInput.x < 0)
+        {
             animator.SetBool("Left", true);
+            animator.SetBool("Right", false);
         }
-    }
-
-     private void Attack()
-    {
-        Debug.Log("Player Attack");
-        GameObject weapon = Instantiate(weaponPrefabs,transform.position + transform.forward, transform.rotation);
-        Rigidbody rb = weapon.GetComponent<Rigidbody>();
-
-        if(rb != null){
-            rb.AddForce(transform.forward * 40f, ForceMode.Impulse);
+        else{
+            animator.SetBool("Right", false);
+            animator.SetBool("Left", false);
         }
-
-        Destroy(weapon, 4f);
     }
 }

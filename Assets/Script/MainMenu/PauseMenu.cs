@@ -30,6 +30,8 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         hideUI[0].SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void OnPause(InputAction.CallbackContext context)
@@ -50,9 +52,12 @@ public class PauseMenu : MonoBehaviour
         hideUI[0].SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    public void Restart(){
+    public void Restart()
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Gameplay");
 
@@ -62,6 +67,8 @@ public class PauseMenu : MonoBehaviour
         hideUI[0].SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void MainMenu()
     {
@@ -69,7 +76,8 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void Quit(){
+    public void Quit()
+    {
         Time.timeScale = 1f;
     }
 }

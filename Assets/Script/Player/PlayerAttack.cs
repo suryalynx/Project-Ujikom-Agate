@@ -6,30 +6,63 @@ public class PlayerAttack : MonoBehaviour
 {
     [Header("Weapon")]
     public GameObject weaponPrefabs;
+    public Transform projectile;
+
+    private Animator animator;
+    private bool weaponFired;
+    private bool fireInput;
     private PlayerInputActions inputActions;
 
-    void Awake(){
-        inputActions = GetComponent<PlayerInputActions>();
-    }
-    void OnEnable()
+    void Awake()
     {
-        inputActions.Player.Fire.Enable();
-        inputActions.Player.Fire.performed += ctx => Attack();
+        animator = GetComponent<Animator>();
+        inputActions = new PlayerInputActions();
+        
+
+        inputActions.Player.Fire.performed += ctx => fireInput = ctx.ReadValueAsButton();
+        inputActions.Player.Fire.canceled += ctx => fireInput = false;
     }
-    void OnDisable()
+    private void OnEnable()
     {
-        inputActions.Player.Fire.performed -= ctx => Attack();
-        inputActions.Player.Fire.Disable();
+        inputActions.Player.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Player.Disable();
+    }
+
+    private void Update()
+    {
+        Attack();
     }
 
     private void Attack()
     {
-        Debug.Log("Player Attack");
-        GameObject weapon = Instantiate(weaponPrefabs,transform.position + transform.forward, transform.rotation);
-        Rigidbody rb = weapon.GetComponent<Rigidbody>();
+        if (!weaponFired)
+        {
+            {
+                if (fireInput)
+                {
+                    weaponFired = true;
+                    GameObject weapon = Instantiate(weaponPrefabs, projectile.position + projectile.forward, projectile.rotation);
+                    Rigidbody rb = weapon.GetComponent<Rigidbody>();
 
-        if(rb != null){
-            rb.AddForce(transform.forward * 10f, ForceMode.Impulse);
+                    if (rb != null)
+                    {
+                        rb.AddForce(projectile.forward * 40f, ForceMode.Impulse);
+                    }
+                    animator.SetTrigger("Throw");
+                    Destroy(weapon, 3f);
+
+                }
+            }
         }
+        else if (weaponFired)
+        {
+            fireInput = false;
+            weaponFired = false;
+        }
+
     }
 }

@@ -7,12 +7,19 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    [Header("UI Content")]
     public TextMeshProUGUI countDownText;
     public TextMeshProUGUI ScoreText;
+    public float countDown = 60f;
+
+    [Header("Game Over Settings")]
     public GameObject gameOver;
     public GameObject mainCamera;
     public GameObject gameOverCamera;
-    public float countDown = 60f;
+    [Header("Object Player")]
+    public PlayerMovement playerMovement;
+    public PlayerAttack playerAttack;
+    
 
     [Header("SFX")]
     public AudioClip[] sfx;
@@ -30,6 +37,9 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(false);
         mainCamera.SetActive(true);
         gameOverCamera.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update(){
@@ -45,7 +55,11 @@ public class GameManager : MonoBehaviour
 
     void GameOver(){
         isGameOver = true;
-        animator.SetBool("GameOver",true);
+        playerMovement.enabled = false;
+        playerAttack.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        animator.SetTrigger("GameOver");
         mainCamera.SetActive(false);
         gameOverCamera.SetActive(true);
         gameOver.SetActive(true);
