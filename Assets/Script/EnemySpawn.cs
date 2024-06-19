@@ -6,7 +6,10 @@ public class EnemySpawn : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     public Transform[] spawnPoint;
-    public float speed = 250f;
+    public int spawnInterval = 2;
+    public int spawnCount = 0 ;
+    public float speed = 2f;
+    private bool spawning = true;
 
     void Start(){
         foreach(Transform spawnPoint in spawnPoint){
@@ -23,7 +26,7 @@ public class EnemySpawn : MonoBehaviour
     void SetupEnemy(GameObject enemy){
         Rigidbody rb = enemy.GetComponent<Rigidbody>();
         if(rb != null){
-            rb.velocity = transform.forward * speed; 
+            rb.velocity = -transform.forward * speed; 
         }
     }
 

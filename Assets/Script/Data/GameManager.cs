@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public TextMeshProUGUI countDownText;
     public TextMeshProUGUI ScoreText;
     public GameObject gameOver;
@@ -19,6 +20,10 @@ public class GameManager : MonoBehaviour
 
     private int score = 0;
     private bool isGameOver = false;
+
+    private void Awake(){
+        instance = this;
+    }
 
     private void Start()
     {
