@@ -9,13 +9,15 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("UI Content")]
     public TextMeshProUGUI countDownText;
-    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI scoreText;
     public float countDown = 60f;
 
     [Header("Game Over Settings")]
     public GameObject gameOver;
     public GameObject mainCamera;
     public GameObject gameOverCamera;
+    public TextMeshProUGUI scoreTextGameOver;
+
     [Header("Object Player")]
     public PlayerMovement playerMovement;
     public PlayerAttack playerAttack;
@@ -43,6 +45,8 @@ public class GameManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        UpdateScoreUI();
     }
 
     void Update()
@@ -71,5 +75,19 @@ public class GameManager : MonoBehaviour
         mainCamera.SetActive(false);
         gameOverCamera.SetActive(true);
         gameOver.SetActive(true);
+
+        scoreTextGameOver.text = score.ToString();
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+
+        UpdateScoreUI();
+    }
+
+    private void UpdateScoreUI()
+    {
+        scoreText.text = score.ToString();
     }
 }
