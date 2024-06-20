@@ -23,11 +23,10 @@ public class GameManager : MonoBehaviour
     public PlayerAttack playerAttack;
 
 
-    [Header("SFX")]
-    public AudioClip[] sfx;
+    [Header("Animator")]
     public Animator animator;
 
-    private int score = 0;
+    private int score = 100;
     private bool isGameOver = false;
 
     private void Awake()
@@ -71,6 +70,8 @@ public class GameManager : MonoBehaviour
         playerAttack.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        animator.SetBool("Left", false);
+        animator.SetBool("Right", false);
         animator.SetTrigger("GameOver");
         mainCamera.SetActive(false);
         gameOverCamera.SetActive(true);

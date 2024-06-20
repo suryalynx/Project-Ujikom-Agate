@@ -1116,7 +1116,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -123.27548, y: 14.8591}
-  m_SizeDelta: {x: 683.3571, y: 391.6786}
+  m_SizeDelta: {x: 500, y: 492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704005396
 MonoBehaviour:
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.36862746}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2532,16 +2532,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 1351312814}
-  ScoreText: {fileID: 196998583}
+  scoreText: {fileID: 196998583}
   countDown: 60
   gameOver: {fileID: 1796520167}
   mainCamera: {fileID: 992214339}
   gameOverCamera: {fileID: 956389160}
+  scoreTextGameOver: {fileID: 1865949603}
   playerMovement: {fileID: 1782169337}
   playerAttack: {fileID: 1782169344}
-  sfx:
-  - {fileID: 8300000, guid: 821abbd1f84b1f840a77f7944f690132, type: 3}
-  - {fileID: 8300000, guid: c6600c5491e54a044b5fa6d406a6e20b, type: 3}
   animator: {fileID: 1782169338}
 --- !u!1 &1489856665
 GameObject:
