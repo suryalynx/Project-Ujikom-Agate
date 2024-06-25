@@ -93,6 +93,7 @@ MonoBehaviour:
   speed: 3
   health: 300
   score: 5
+  deathVFXPrefab: {fileID: 1301838829985456324, guid: 6c25d3cf721c41d41ba68682803ad314, type: 3}
   animator: {fileID: 4872783162761308692}
 --- !u!1001 &24443761901298009
 PrefabInstance:

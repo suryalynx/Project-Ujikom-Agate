@@ -8,6 +8,7 @@ public class AnimalAI : MonoBehaviour
     public float speed = 3.0f;
     public int health = 100;
     public int score;
+    public GameObject deathVFXPrefab;
     public Animator animator;
 
     private void Awake()
@@ -24,6 +25,10 @@ public class AnimalAI : MonoBehaviour
         if (health <= 0)
         {
             SFXManager.instance.PlaySFX("DestroyAnimal");
+            if (deathVFXPrefab != null)
+            {
+                Instantiate(deathVFXPrefab, transform.position, transform.rotation);
+            }
             GameManager.instance.AddScore(score);
             Destroy(gameObject);
         }
@@ -41,7 +46,8 @@ public class AnimalAI : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * speed);
             animator.SetTrigger("IsWalk");
         }
-        else{
+        else
+        {
             Destroy(gameObject);
         }
     }
@@ -58,4 +64,5 @@ public class AnimalAI : MonoBehaviour
     {
         health -= damage;
     }
+
 }
