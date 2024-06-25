@@ -2932,6 +2932,7 @@ MonoBehaviour:
   - {fileID: 2006369000629403269, guid: c4fcee4f32f3d9a46a648aef9fde9f39, type: 3}
   - {fileID: 2006369000629403269, guid: c4fcee4f32f3d9a46a648aef9fde9f39, type: 3}
   - {fileID: 743397676925184664, guid: 4100034b58e359440b9d2f5658b47363, type: 3}
+  - {fileID: 26942026371632544, guid: 7b43eb7171ffbc04f891814996e8efbc, type: 3}
   bgmPrefab: {fileID: 3123375475685845528, guid: 4d0dfe6ad31fa2748a700f086afcb311, type: 3}
 --- !u!1 &1496874221
 GameObject:

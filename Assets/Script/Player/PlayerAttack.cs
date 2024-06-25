@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
 
                     if (rb != null)
                     {
-                        rb.AddForce(projectile.forward * 40f, ForceMode.Impulse);
+                        rb.AddForce(projectile.forward * 30f, ForceMode.Impulse);
                     }
                     SFXManager.instance.PlaySFX("SFXFire");
                     animator.SetTrigger("Throw");
