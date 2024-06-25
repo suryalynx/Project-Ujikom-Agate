@@ -53,6 +53,7 @@ public class AnimalAI : MonoBehaviour
         }
         else
         {
+            DestroyCheckpoint();
             Destroy(gameObject);
         }
     }
@@ -61,6 +62,7 @@ public class AnimalAI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Checkpoint"))
         {
+            DestroyCheckpoint();
             Destroy(gameObject);
         }
     }
@@ -86,12 +88,17 @@ public class AnimalAI : MonoBehaviour
 
         GameManager.instance.AddScore(score);
 
+        DestroyCheckpoint();
+
+        Destroy(gameObject);
+    }
+
+    private void DestroyCheckpoint()
+    {
         if (checkpoint != null)
         {
             Destroy(checkpoint.gameObject);
         }
-
-        Destroy(gameObject);
     }
 
 }

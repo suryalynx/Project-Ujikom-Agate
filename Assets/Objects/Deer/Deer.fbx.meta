@@ -24,12 +24,23 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Horse_Rig_SHJntGrp|Horse_Rig_SHJntGrp|Take
+      001|BaseLayer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Horse_Rig_Spine_01SHJnt'
+      has translation animation that will be discarded.\n\t'Horse_Rig_Spine_02SHJnt'
+      has translation animation that will be discarded.\n\t'Horse_Rig_Spine_TopSHJnt'
+      has translation animation that will be discarded.\n\t'Horse_Rig_Neck_01SHJnt'
+      has translation animation that will be discarded.\n\t'Horse_Rig_Neck_02SHJnt'
+      has translation animation that will be discarded.\n\t'Horse_Rig_Neck_02SHJnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Horse_Rig_Neck_03SHJnt'
+      has translation animation that will be discarded.\n\t'Horse_Rig_Neck_03SHJnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Horse_Rig_Neck_TopSHJnt'
+      has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -51,12 +62,12 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -115,8 +126,470 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Horse_Rig_ROOTSHJnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_HindLeg_HipSHJnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_HindLeg_HipSHJnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_HindLeg_Knee1SHJnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_HindLeg_Knee1SHJnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_HindLeg_Knee2SHJnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_HindLeg_Knee2SHJnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_Spine_01SHJnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_Spine_02SHJnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_Neck_01SHJnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_Neck_TopSHJnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_FrontLeg_HipSHJnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_FrontLeg_Knee1SHJnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_FrontLeg_HipSHJnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_FrontLeg_Knee2SHJnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_FrontLeg_Knee1SHJnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_FrontLeg_AnkleSHJnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_FrontLeg_Knee2SHJnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_HindLeg_AnkleSHJnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_HindLeg_AnkleSHJnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_l_Eye_01SHJnt
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_r_Eye_01SHJnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_Head_JawSHJnt
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Horse_Rig_Spine_TopSHJnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Deer(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Moose_Male_01
+      parentName: Deer(Clone)
+      position: {x: 7.477713e-24, y: -0.0000000015571544, z: 0.05832359}
+      rotation: {x: -0.000000035474965, y: 5.9164573e-31, z: 1.615766e-23, w: 1}
+      scale: {x: 0.81910926, y: 0.81910926, z: 0.81910926}
+    - name: Horse_Rig
+      parentName: Deer(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_SHJntGrp
+      parentName: Horse_Rig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_ROOTSHJnt
+      parentName: Horse_Rig_SHJntGrp
+      position: {x: 0.0033510923, y: 0.0862232, z: -0.009472259}
+      rotation: {x: -0.7330408, y: -0.11310097, z: -0.12584573, w: 0.65880364}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Horse_Rig_Spine_01SHJnt
+      parentName: Horse_Rig_ROOTSHJnt
+      position: {x: 1.6542016e-17, y: 0, z: 0.07772662}
+      rotation: {x: 0.50000006, y: 0.50000006, z: -0.5, w: 0.5}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
+    - name: Horse_Rig_Spine_02SHJnt
+      parentName: Horse_Rig_Spine_01SHJnt
+      position: {x: -0.05944889, y: 8.5265126e-16, z: -0.000000021814186}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Horse_Rig_Spine_TopSHJnt
+      parentName: Horse_Rig_Spine_02SHJnt
+      position: {x: -0.018804384, y: 5.6308665e-16, z: -0.000000022636153}
+      rotation: {x: 0.000000029802322, y: 0.59305835, z: 0.000000029802322, w: 0.80515957}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Horse_Rig_l_Clavicle_01_01SHJnt
+      parentName: Horse_Rig_Spine_TopSHJnt
+      position: {x: -0.000000009412833, y: -0.009673913, z: -0.000000023059012}
+      rotation: {x: -0.00000008940697, y: -0.00000008940697, z: 0.7071068, w: 0.7071068}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
+    - name: Horse_Rig_l_FrontLeg_HipSHJnt
+      parentName: Horse_Rig_l_Clavicle_01_01SHJnt
+      position: {x: -0.024621341, y: 0.000000006538557, z: -0.0011213508}
+      rotation: {x: -0.65323985, y: 0.20815016, z: 0.22763856, w: 0.6914709}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Horse_Rig_l_FrontLeg_Knee1SHJnt
+      parentName: Horse_Rig_l_FrontLeg_HipSHJnt
+      position: {x: -0.05562773, y: 0.0000000022192048, z: 0.000000013341545}
+      rotation: {x: -0.0018838637, y: 0.0021857016, z: -0.10754958, w: 0.9941955}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
+    - name: Horse_Rig_l_FrontLeg_Knee2SHJnt
+      parentName: Horse_Rig_l_FrontLeg_Knee1SHJnt
+      position: {x: -0.044812474, y: 0.0000000041658295, z: -0.0000000030357334}
+      rotation: {x: -0.000000058844286, y: -0.009700619, z: -0.000000060354026, w: 0.99995303}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Horse_Rig_l_FrontLeg_AnkleSHJnt
+      parentName: Horse_Rig_l_FrontLeg_Knee2SHJnt
+      position: {x: -0.05458725, y: -6.625188e-10, z: -0.000000008018987}
+      rotation: {x: 0.00013989421, y: -0.20322968, z: -0.010918923, w: 0.9790702}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Horse_Rig_l_FrontLeg_BallSHJnt
+      parentName: Horse_Rig_l_FrontLeg_AnkleSHJnt
+      position: {x: -0.03814814, y: 0.0000000020393522, z: 0.02366349}
+      rotation: {x: -0.00000008688509, y: 0.70710677, z: -0.0000000017916613, w: 0.7071069}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999998}
+    - name: Horse_Rig_l_FrontLeg_ToeSHJnt
+      parentName: Horse_Rig_l_FrontLeg_BallSHJnt
+      position: {x: -0.019785745, y: 5.2223115e-10, z: -8.280024e-10}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Horse_Rig_l_FrontLeg_ToeSHJnt_end
+      parentName: Horse_Rig_l_FrontLeg_ToeSHJnt
+      position: {x: -0, y: 0.019785749, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_Clavicle_01_01SHJnt
+      parentName: Horse_Rig_Spine_TopSHJnt
+      position: {x: -0.000000011949994, y: 0.009673913, z: -0.00000002221329}
+      rotation: {x: -0.00000008940697, y: -0.00000008940697, z: 0.7071068, w: 0.7071068}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
+    - name: Horse_Rig_r_FrontLeg_HipSHJnt
+      parentName: Horse_Rig_r_Clavicle_01_01SHJnt
+      position: {x: 0.024621341, y: 0.000000012534928, z: -0.0011213478}
+      rotation: {x: 0.10716906, y: 0.69195104, z: 0.70183676, w: -0.13093415}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Horse_Rig_r_FrontLeg_Knee1SHJnt
+      parentName: Horse_Rig_r_FrontLeg_HipSHJnt
+      position: {x: -0.055627737, y: -0.0000000025491667, z: 0.000000016460778}
+      rotation: {x: 0.000000029802315, y: 0.017514553, z: 0.000000029802315, w: 0.99984664}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999994}
+    - name: Horse_Rig_r_FrontLeg_Knee2SHJnt
+      parentName: Horse_Rig_r_FrontLeg_Knee1SHJnt
+      position: {x: -0.044812474, y: -6.025419e-10, z: -1.900375e-11}
+      rotation: {x: -0.000000058844286, y: -0.009700619, z: -0.000000060354026, w: 0.99995303}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Horse_Rig_r_FrontLeg_AnkleSHJnt
+      parentName: Horse_Rig_r_FrontLeg_Knee2SHJnt
+      position: {x: -0.054587252, y: -0.0000000054308904, z: -0.0000000049450213}
+      rotation: {x: 0.000000029181562, y: 0.012803064, z: 0.000000030410416, w: 0.9999181}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Horse_Rig_r_FrontLeg_BallSHJnt
+      parentName: Horse_Rig_r_FrontLeg_AnkleSHJnt
+      position: {x: -0.038148135, y: 0.0000000020393522, z: 0.023663495}
+      rotation: {x: -0.00000008688509, y: 0.70710677, z: -0.0000000017916613, w: 0.7071069}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999998}
+    - name: Horse_Rig_r_FrontLeg_ToeSHJnt
+      parentName: Horse_Rig_r_FrontLeg_BallSHJnt
+      position: {x: -0.019785749, y: -0.0000000018630546, z: -8.280071e-10}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Horse_Rig_r_FrontLeg_ToeSHJnt_end
+      parentName: Horse_Rig_r_FrontLeg_ToeSHJnt
+      position: {x: -0, y: 0.019785747, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_Neck_01SHJnt
+      parentName: Horse_Rig_Spine_TopSHJnt
+      position: {x: 0.0014270315, y: 5.684342e-16, z: -0.046716064}
+      rotation: {x: -0.000000029802312, y: -0.3124385, z: -0.000000014901156, w: 0.94993794}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: Horse_Rig_Neck_02SHJnt
+      parentName: Horse_Rig_Neck_01SHJnt
+      position: {x: -0.03605231, y: -0.0000000047683715, z: 0.009765653}
+      rotation: {x: 3.5527128e-15, y: 0.00000011920926, z: 8.881782e-16, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Horse_Rig_Neck_03SHJnt
+      parentName: Horse_Rig_Neck_02SHJnt
+      position: {x: -0.056803357, y: 0.0000000047683737, z: -0.0038126276}
+      rotation: {x: -0.00000004373417, y: -0.00000005960463, z: 0.000000046256197, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Horse_Rig_Neck_TopSHJnt
+      parentName: Horse_Rig_Neck_03SHJnt
+      position: {x: -0.02087307, y: -0.0000000023841833, z: 0.023870924}
+      rotation: {x: 0.000000031606813, y: -0.32475471, z: -0.000000094837205, w: 0.9457983}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1}
+    - name: Horse_Rig_Head_JawSHJnt
+      parentName: Horse_Rig_Neck_TopSHJnt
+      position: {x: 0.013237337, y: 0.0000000047683715, z: 0.013826943}
+      rotation: {x: -0.000000080742645, y: -0.000000044703473, z: 0.7071067, w: 0.70710677}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Horse_Rig_Head_JawEndSHJnt
+      parentName: Horse_Rig_Head_JawSHJnt
+      position: {x: -2.2737367e-15, y: -0.028428352, z: 0.053989828}
+      rotation: {x: 0.8621107, y: -0.000000013784831, z: 0.00000010882571, w: 0.5067202}
+      scale: {x: 1, y: 0.9999997, z: 0.9999996}
+    - name: Horse_Rig_Head_JawEndSHJnt_end
+      parentName: Horse_Rig_Head_JawEndSHJnt
+      position: {x: -0, y: 0.061016988, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_Head_TopSHJnt
+      parentName: Horse_Rig_Neck_TopSHJnt
+      position: {x: -0.030000005, y: 0.000000004768373, z: -0.0000000011994215}
+      rotation: {x: -0.000000080742645, y: -0.000000044703473, z: 0.7071067, w: 0.70710677}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Horse_Rig_l_Eye_01SHJnt
+      parentName: Horse_Rig_Head_TopSHJnt
+      position: {x: -0.018071441, y: 0.002307202, z: 0.01230493}
+      rotation: {x: 0.07033601, y: 0.070335954, z: -0.70359993, w: 0.7036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_l_Eye_01SHJnt_end
+      parentName: Horse_Rig_l_Eye_01SHJnt
+      position: {x: -0, y: 0.021984367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_Eye_01SHJnt
+      parentName: Horse_Rig_Head_TopSHJnt
+      position: {x: 0.018071443, y: 0.0023071973, z: 0.01230494}
+      rotation: {x: 0.07033601, y: 0.070335954, z: -0.70359993, w: 0.7036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_Eye_01SHJnt_end
+      parentName: Horse_Rig_r_Eye_01SHJnt
+      position: {x: -0, y: 0.021984367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_l_HindLeg_HipSHJnt
+      parentName: Horse_Rig_ROOTSHJnt
+      position: {x: -0.034229163, y: -0.01, z: -0.0009805536}
+      rotation: {x: 0.47675392, y: -0.47923627, z: 0.4963423, w: 0.54468584}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_l_HindLeg_Knee1SHJnt
+      parentName: Horse_Rig_l_HindLeg_HipSHJnt
+      position: {x: -0.044487562, y: -0.0000000012522037, z: -0.00000000223093}
+      rotation: {x: -0.000000009313226, y: -0.21154378, z: -0.00000005820766, w: 0.97736853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_l_HindLeg_Knee2SHJnt
+      parentName: Horse_Rig_l_HindLeg_Knee1SHJnt
+      position: {x: -0.050181564, y: -0.0000000015568018, z: 0.0000000019082802}
+      rotation: {x: 0.007883012, y: 0.834473, z: 0.03330903, w: 0.5499848}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Horse_Rig_l_HindLeg_AnkleSHJnt
+      parentName: Horse_Rig_l_HindLeg_Knee2SHJnt
+      position: {x: -0.050231002, y: -0.0000000017498356, z: 0.000000012314848}
+      rotation: {x: -0.0000000013013916, y: -0.03206309, z: -0.000000008213963, w: 0.99948585}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Horse_Rig_l_HindLeg_BallSHJnt
+      parentName: Horse_Rig_l_HindLeg_AnkleSHJnt
+      position: {x: -0.04003157, y: 4.0856205e-16, z: 0.022411533}
+      rotation: {x: -0.00000005977327, y: 0.7071068, z: -0.000000014364055, w: 0.7071068}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.99999976}
+    - name: Horse_Rig_l_HindLeg_ToeSHJnt
+      parentName: Horse_Rig_l_HindLeg_BallSHJnt
+      position: {x: -0.015000003, y: -0.000000004653001, z: -2.0863775e-10}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_l_HindLeg_ToeSHJnt_end
+      parentName: Horse_Rig_l_HindLeg_ToeSHJnt
+      position: {x: -0, y: 0.015, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_HindLeg_HipSHJnt
+      parentName: Horse_Rig_ROOTSHJnt
+      position: {x: 0.034229163, y: -0.01, z: -0.0009805536}
+      rotation: {x: 0.4882778, y: -0.4857352, z: 0.53682196, w: 0.4873072}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_HindLeg_Knee1SHJnt
+      parentName: Horse_Rig_r_HindLeg_HipSHJnt
+      position: {x: -0.044487562, y: -0.0000000012522037, z: -0.0000000025374416}
+      rotation: {x: -0.000000009313226, y: -0.21154378, z: -0.00000005820766, w: 0.97736853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_HindLeg_Knee2SHJnt
+      parentName: Horse_Rig_r_HindLeg_Knee1SHJnt
+      position: {x: -0.050181575, y: 8.2738416e-10, z: 0.000000005244277}
+      rotation: {x: 0.014224601, y: 0.8439664, z: -0.013907553, w: 0.53602713}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_HindLeg_AnkleSHJnt
+      parentName: Horse_Rig_r_HindLeg_Knee2SHJnt
+      position: {x: -0.050231002, y: -0.0000000017498353, z: 0.000000010036893}
+      rotation: {x: -0.0000000013058116, y: -0.03206309, z: -0.000000008346705, w: 0.99948585}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Horse_Rig_r_HindLeg_BallSHJnt
+      parentName: Horse_Rig_r_HindLeg_AnkleSHJnt
+      position: {x: -0.040031575, y: 8.393286e-16, z: 0.022411533}
+      rotation: {x: -0.000000059823265, y: 0.7071068, z: -0.00000001430865, w: 0.7071068}
+      scale: {x: 0.9999997, y: 0.9999999, z: 0.99999976}
+    - name: Horse_Rig_r_HindLeg_ToeSHJnt
+      parentName: Horse_Rig_r_HindLeg_BallSHJnt
+      position: {x: -0.015000001, y: 1.15376264e-10, z: 1.487912e-11}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_r_HindLeg_ToeSHJnt_end
+      parentName: Horse_Rig_r_HindLeg_ToeSHJnt
+      position: {x: -0, y: 0.014999999, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Horse_Rig_Tail_01SHJnt
+      parentName: Horse_Rig_ROOTSHJnt
+      position: {x: -2.9125009e-19, y: 0.053390387, z: -0.039458208}
+      rotation: {x: 0.25810716, y: -0.25810716, z: 0.65831655, w: 0.6583166}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Horse_Rig_Tail_02SHJnt
+      parentName: Horse_Rig_Tail_01SHJnt
+      position: {x: -0.081468925, y: -5.684342e-16, z: 0.011355972}
+      rotation: {x: 0.00000004470348, y: 0.33105698, z: 0.000000104773775, w: 0.9436108}
+      scale: {x: 1.0000004, y: 1.0000004, z: 0.9999998}
+    - name: Horse_Rig_Tail_TopSHJnt
+      parentName: Horse_Rig_Tail_02SHJnt
+      position: {x: -0.063602254, y: 6.217249e-17, z: 0.027071249}
+      rotation: {x: 0.99789953, y: 0.00000007806655, z: -0.06478091, w: 0.000000004304819}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000006}
+    - name: Horse_Rig_Tail_TopSHJnt_end
+      parentName: Horse_Rig_Tail_TopSHJnt
+      position: {x: -0, y: 0.06912381, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -127,13 +600,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
