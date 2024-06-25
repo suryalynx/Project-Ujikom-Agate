@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Food
+  - Anjing
+  - Sapi
+  - Kuda
+  - Rusa
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

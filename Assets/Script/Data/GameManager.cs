@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Over Settings")]
     public GameObject gameOver;
-    public GameObject mainCamera;
-    public GameObject gameOverCamera;
+    public Camera mainCamera;
+    public Camera gameOverCamera;
+    public float transitionDuration = 1.0f;
     public TextMeshProUGUI scoreTextGameOver;
 
     [Header("Object Player")]
@@ -26,8 +27,13 @@ public class GameManager : MonoBehaviour
     [Header("Animator")]
     public Animator animator;
 
-    private int score = 100;
+    private int score = 0;
     private bool isGameOver = false;
+    private float timeElapsed;
+    private bool isTransitioning;
+
+    private Camera currentCamera;
+    private Camera targetCamera;
 
     private void Awake()
     {
@@ -37,18 +43,24 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameOver.SetActive(false);
-        mainCamera.SetActive(true);
-        gameOverCamera.SetActive(false);
+        mainCamera.enabled = true;
+        gameOverCamera.enabled = false;
+
+        currentCamera = mainCamera;
+        targetCamera = gameOverCamera;
 
         SFXManager.instance.PlayBGM();
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
         UpdateScoreUI();
     }
 
     void Update()
+    {
+        ShowGameOver();
+    }
+
+    public void ShowGameOver()
     {
         if (!isGameOver)
         {
@@ -60,11 +72,16 @@ public class GameManager : MonoBehaviour
                 GameOver();
             }
         }
+        if (isTransitioning)
+        {
+            HandleCameraTransition();
+        }
     }
 
-    void GameOver()
+    public void GameOver()
     {
         isGameOver = true;
+        EnemySpawn.instance.StopSpawning();
         SFXManager.instance.PlaySFX("SFXGameOver");
         playerMovement.enabled = false;
         playerAttack.enabled = false;
@@ -73,11 +90,10 @@ public class GameManager : MonoBehaviour
         animator.SetBool("Left", false);
         animator.SetBool("Right", false);
         animator.SetTrigger("GameOver");
-        mainCamera.SetActive(false);
-        gameOverCamera.SetActive(true);
         gameOver.SetActive(true);
-
         scoreTextGameOver.text = score.ToString();
+
+        StartCameraTransition();
     }
 
     public void AddScore(int amount)
@@ -90,5 +106,36 @@ public class GameManager : MonoBehaviour
     private void UpdateScoreUI()
     {
         scoreText.text = score.ToString();
+    }
+
+    private void StartCameraTransition()
+    {
+        isTransitioning = true;
+        timeElapsed = 0;
+
+        currentCamera.enabled = true;
+        targetCamera.enabled = true;
+    }
+
+    private void HandleCameraTransition()
+    {
+        timeElapsed += Time.deltaTime;
+        float t = timeElapsed / transitionDuration;
+        t = t * t * (3f - 2f * t); // Ease In Out formula
+
+        currentCamera.transform.position = Vector3.Lerp(currentCamera.transform.position, targetCamera.transform.position, t);
+        currentCamera.transform.rotation = Quaternion.Slerp(currentCamera.transform.rotation, targetCamera.transform.rotation, t);
+
+        if (timeElapsed >= transitionDuration)
+        {
+            EndCameraTransition();
+        }
+    }
+
+    private void EndCameraTransition()
+    {
+        isTransitioning = false;
+        timeElapsed = 0;
+        targetCamera.enabled = false;
     }
 }
