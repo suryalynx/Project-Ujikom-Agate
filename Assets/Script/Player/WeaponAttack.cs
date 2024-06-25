@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int damage = 25;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        AnimalAI enemyAI = other.GetComponent<AnimalAI>();
+
+        if (enemyAI != null && (other.gameObject.CompareTag("Anjing") || other.gameObject.CompareTag("Sapi") || other.gameObject.CompareTag("Kuda") || other.gameObject.CompareTag("Rusa")))
+        {
+            enemyAI.TakeDamage(damage);
+            SFXManager.instance.PlaySFX("SFXEat");
+            Destroy(gameObject);
+        }
     }
 }
