@@ -39,6 +39,7 @@ public class EnemySpawn : MonoBehaviour
         if (animalAI != null)
         {
             animalAI.checkpoint = CalculateCheckpointPosition(spawnPoints[spawnIndex]);
+
         }
     }
 

@@ -54,7 +54,7 @@ public class PlayerAttack : MonoBehaviour
                     }
                     SFXManager.instance.PlaySFX("SFXFire");
                     animator.SetTrigger("Throw");
-                    Destroy(weapon, 3f);
+                    Destroy(weapon,2f);
 
                 }
             }
